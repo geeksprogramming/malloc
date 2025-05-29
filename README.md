@@ -11,7 +11,6 @@ A custom dynamic memory allocator in C that mimics the behavior of malloc, free,
 - Footer Optimization  
 - Heap Consistency Checking  
 
-
 ## Description of the Dynamic Memory Allocator Functions
 
 - **`mm_init`**  
@@ -34,7 +33,12 @@ A custom dynamic memory allocator in C that mimics the behavior of malloc, free,
 
 ## Support routines
 
-The `memlib.c` package simulates the memory system for the dynamic memory allocator. The following functions are available in `memlib.c`:
+The `memlib.c` package simulates the memory system for the dynamic memory allocator. 
+
+- [`memlib.h`](https://gist.github.com/geeksprogramming/7ecd3154964f30ccab408a941cbd3384)
+- [`memlib.c`](https://gist.github.com/geeksprogramming/0f0a4333012c852bcb61fefab7ee5d5f)
+
+The following functions are available in `memlib.c`:
 
 - `void* mm_sbrk(int incr)`: Expands the heap by `incr` bytes, where `incr` is a positive non-zero integer. It returns a generic pointer to the first byte of the newly allocated heap area. The semantics are identical to the Unix `sbrk` function, but `mm_sbrk` accepts only non-negative integer arguments. Use `mm_sbrk` for the tests; do **not** use `sbrk`.
 
@@ -53,7 +57,6 @@ The `memlib.c` package simulates the memory system for the dynamic memory alloca
 ## File Structure
 
 - `mm.c` – Core implementation file where allocator logic resides
-- `memlib.c` – Simulates a memory system interface (`mm_sbrk`, `mm_heap_lo`, etc.)
 
 ## Heap Consistency Checker
 
