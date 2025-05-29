@@ -50,12 +50,12 @@ The `memlib.c` package simulates the memory system for the dynamic memory alloca
 
 - `void* memcpy(void* dst, const void* src, size_t n)`: Copies `n` bytes from `src` to `dst`.
 
-## 🧩 File Structure
+## File Structure
 
 - `mm.c` – Core implementation file where allocator logic resides
 - `memlib.c` – Simulates a memory system interface (`mm_sbrk`, `mm_heap_lo`, etc.)
 
-## 🔍 Heap Consistency Checker
+## Heap Consistency Checker
 
 The `mm_checkheap()` function validates internal invariants such as:
 
@@ -65,7 +65,7 @@ The `mm_checkheap()` function validates internal invariants such as:
 - No pointer overflows or invalid addresses
 - No overlapping allocated blocks
 
-## 📁 Example Usage
+## Example Usage
 
 ```c
 mm_init(); // Initialize the heap
